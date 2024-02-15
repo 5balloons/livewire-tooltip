@@ -37,11 +37,11 @@ class Tooltip extends Component
             </style>
             <div wire:ignore.self id="tooltip">
                 <div class="flex">
+                    <div >
+                    {!! $toolTipHtml !!}
+                    </div>
                     <div wire:loading>
                         <div class="w-4 h-4 border-solid inline-block border-b-2 border-white rounded-full animate-spin"></div>
-                    </div>  
-                    <div>
-                    {!! $toolTipHtml !!}
                     </div>
                 </div>
             </div>
