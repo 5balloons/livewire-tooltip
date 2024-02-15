@@ -1,0 +1,46 @@
+{
+    "name": "5balloons/livewire-tooltip",
+    "description": "A dynamic tooltip component using laravel livewire",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tushar Gugnani",
+            "email": "tushar.gugnani@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0",
+        "livewire/livewire": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.0",
+        "pestphp/pest": "1.x-dev",
+        "pestphp/pest-plugin-laravel": "1.x-dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "_5balloons\\LivewireTooltip\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "_5balloons\\LivewireTooltip\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "_5balloons\\LivewireTooltip\\LivewireTooltipServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
