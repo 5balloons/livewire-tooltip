@@ -34,6 +34,25 @@ class Tooltip extends Component
                     border-radius: 4px;
                     font-size: 14px;
                 }
+                .loading-spinner {
+                    width: 1rem; /* Equivalent to w-4 */
+                    height: 1rem; /* Equivalent to h-4 */
+                    border-style: solid; /* Equivalent to border-solid */
+                    display: inline-block; /* Equivalent to inline-block */
+                    border-width: 0 0 2px 0; /* Equivalent to border-b-2 */
+                    border-color: white; /* Equivalent to border-white */
+                    border-radius: 9999px; /* Equivalent to rounded-full */
+                    animation: spin 1s linear infinite; /* Equivalent to animate-spin */
+                }
+
+                @keyframes spin {
+                    from {
+                    transform: rotate(0deg);
+                    }
+                    to {
+                    transform: rotate(360deg);
+                    }
+                }
             </style>
             <div wire:ignore.self id="tooltip">
                 <div class="flex">
@@ -41,7 +60,7 @@ class Tooltip extends Component
                     {!! $toolTipHtml !!}
                     </div>
                     <div wire:loading>
-                        <div class="w-4 h-4 border-solid inline-block border-b-2 border-white rounded-full animate-spin"></div>
+                        <div class="loading-spinner"></div>
                     </div>
                 </div>
             </div>
