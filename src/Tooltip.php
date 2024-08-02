@@ -119,9 +119,11 @@ class Tooltip extends Component
                                 // Show the tooltip
                                 showTooltip();
 
-                                el.addEventListener('mouseout', event => {
+                                container.addEventListener('mouseout', event => {
                                     // Hide the tooltip
-                                    hideTooltip();
+                                    if (event.target.classList.contains('tooltip-link')) {
+                                         hideTooltip();
+                                    }
                                 });
                         }
 
