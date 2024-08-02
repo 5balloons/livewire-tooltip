@@ -142,7 +142,7 @@ class Tooltip extends Component
         
         //try{
             // Check if the class and method is callable
-            if (is_callable([$className, $methodName])) {
+            if (is_callable([$className, $methodName]) && $methodName == 'tooltip') {
 
                 $paramValues = array_values($parameters);
                 // Call the static method dynamically and store the result
